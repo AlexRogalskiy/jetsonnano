@@ -12,7 +12,6 @@ Running Minecraft on NVIDIA Jetson Nano using Docker with persistence
  
  ```
  sudo docker run -d -p 25565:25565 \
-                   --gpus all \
                    -e EULA=true \
                    -e ONLINE_MODE=false \
                    -e DIFFICULTY=hard \
@@ -20,7 +19,7 @@ Running Minecraft on NVIDIA Jetson Nano using Docker with persistence
                    -e MAX_PLAYERS=50 \
                    -e MOTD="welcome to Collabnix" \
                    -v /tmp/minecraft_data:/data \
-                   --name mc 
+                   --name mc \
                    itzg/minecraft-server
 ```
  
